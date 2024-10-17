@@ -10,7 +10,7 @@
           max-height="800"
         >
           <v-card-subtitle class="text-h5 grey darken-1 mb-8 white--text">
-            Statistics
+            流量统计
           </v-card-subtitle>
           <v-card-text>
             <v-row align="center" justify="center">
@@ -26,16 +26,16 @@
                     <v-row align="start" justify="start">
                       <v-col md="auto">
                         <div class="text-center">{{ current_month.month }}</div>
-                        <div>RX: {{ current_month.total_rx }} GB</div>
-                        <div>TX: {{ current_month.total_tx }} GB</div>
+                        <div>接收: {{ current_month.total_rx }} GB</div>
+                        <div>发送: {{ current_month.total_tx }} GB</div>
                       </v-col>
 
                       <v-divider vertical class="mx-5" />
 
                       <v-col md="auto">
                         <div class="text-center">{{ total.year }}</div>
-                        <div>Total RX: {{ total.total_rx }} GB</div>
-                        <div>Total TX: {{ total.total_tx }} GB</div>
+                        <div>总接收: {{ total.total_rx }} GB</div>
+                        <div>总发送: {{ total.total_tx }} GB</div>
                       </v-col>
                     </v-row>
                   </v-card-text>
