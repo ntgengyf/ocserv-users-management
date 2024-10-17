@@ -11,14 +11,14 @@
           <v-card-subtitle
             class="text-h5 grey darken-1 mb-8 white--text text-start"
           >
-            Occtl Command Runner
+            Occtl 命令运行器
           </v-card-subtitle>
           <v-card-text>
             <v-row align="center" justify="start" class="mx-15">
               <v-col md="4" class="my-0 py-0 mx-3">
                 <v-select
                   v-model="command"
-                  label="Command"
+                  label="命令"
                   :items="commands"
                   item-text="text"
                   item-value="command"
@@ -48,7 +48,7 @@
                   :disabled="disabledComput"
                   @click="run"
                 >
-                  Run
+                  运行
                 </v-btn>
               </v-col>
             </v-row>
@@ -101,86 +101,86 @@ export default Vue.extend({
     return {
       commands: [
         {
-          text: "Show Status",
+          text: "显示状态",
           command: "show_status",
-          help: "Prints the status and statistics of the server",
+          help: "显示服务器的状态和统计信息",
           needArg: false,
           label: null,
         },
         {
-          text: "Show Users",
+          text: "显示在线用户",
           command: "show_users",
-          help: "Prints the connected users",
+          help: "显示已连接的用户",
           needArg: false,
           label: null,
         },
         {
-          text: "Show User",
+          text: "显示用户信息",
           command: "show_user",
-          help: "Prints information on the specified user",
+          help: "显示指定用户的信息",
           needArg: true,
-          label: "Username",
+          label: "用户名",
         },
         {
-          text: "Disconnect User",
+          text: "断开用户",
           command: "disconnect_user",
-          help: "Disconnect the specified user",
+          help: "断开指定用户的连接",
           needArg: true,
           label: "Username",
         },
         {
-          text: "Disconnect ID",
+          text: "断开 ID",
           command: "disconnect_id",
-          help: "Disconnect the specified ID",
+          help: "断开指定 ID 的连接",
           needArg: true,
           label: "User ID",
         },
         {
-          text: "Show Iroutes",
+          text: "显示路由",
           command: "show_iroutes",
-          help: "Prints the routes provided by users of the server",
+          help: "显示服务器用户提供的路由",
           needArg: false,
           label: null,
         },
         {
-          text: "Show Ip Bans",
+          text: "显示被禁止的Ip",
           command: "show_ip_bans",
-          help: "Prints the banned IP addresses",
+          help: "显示被禁止的IP地址",
           needArg: false,
           label: null,
         },
         {
           text: "Show Ip Bans Points",
           command: "show_ip_ban_points",
-          help: "Prints all the known IP addresses which have points",
+          help: "显示所有已知的被禁止的IP地址",
           needArg: false,
           label: null,
         },
         {
-          text: "Unban IP",
+          text: "解除被禁止的IP",
           command: "unban_ip",
-          help: "Unban the specified IP",
+          help: "取消指定IP的屏蔽",
           needArg: true,
-          label: "Banned IP",
+          label: "被禁止的IP",
         },
         {
-          text: "Reload Configs",
+          text: "重新加载配置",
           command: "reload_configs",
-          help: "Reloads the server configuration(throttle 1/per minutes)",
+          help: "重新加载服务器配置",
           needArg: false,
           label: null,
         },
         // {
-        //   text: "Show All Sessions",
+        //   text: "显示所有会话",
         //   command: "show_sessions_all",
-        //   help: "Prints all the session IDs",
+        //   help: "显示所有会话ID",
         //   needArg: false,
         //   label: null,
         // },
         // {
-        //   text: "Show Valid Sessions",
+        //   text: "显示有效会话",
         //   command: "show_sessions_valid",
-        //   help: "Prints all the valid for reconnection sessions",
+        //   help: "打印所有有效的重新连接会话",
         //   needArg: false,
         //   label: null,
         // },
