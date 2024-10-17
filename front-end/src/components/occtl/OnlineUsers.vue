@@ -6,7 +6,7 @@
           <v-text-field
             v-model="search"
             append-icon="mdi-magnify"
-            label="Search Online User"
+            label="搜索在线用户"
             single-line
             hide-details
           />
@@ -57,7 +57,7 @@ export default Vue.extend({
       search: "",
       headers: [
         {
-          text: "Username",
+          text: "用户名",
           align: "start",
           filterable: true,
           value: "username",
@@ -69,7 +69,7 @@ export default Vue.extend({
           value: "host",
         },
         {
-          text: "Remote",
+          text: "远程IP",
           align: "start",
           filterable: true,
           value: "remote_ip",
@@ -81,7 +81,7 @@ export default Vue.extend({
           value: "since",
         },
         {
-          text: "Averages",
+          text: "平均",
           align: "start",
           filterable: false,
           value: "averages",
