@@ -17,7 +17,7 @@
           <v-col md="4" class="my-0 py-0 mt-3">
             <v-text-field
               v-model="groupInput.name"
-              label="Group Name"
+              label="群组名称"
               :rules="[rules.required]"
               dense
               outlined
@@ -29,7 +29,7 @@
               <OcservConfigs
                 v-model="groupInput.configs"
                 :initInput="initInput.configs"
-                label="Config keys"
+                label="配置值"
                 valueLabel="Config Value"
                 vmodelEmit
                 outlined
@@ -40,7 +40,7 @@
           <v-col md="12">
             <v-textarea
               v-model="groupInput.desc"
-              label="Description"
+              label="描述"
               dense
               outlined
               rows="4"
