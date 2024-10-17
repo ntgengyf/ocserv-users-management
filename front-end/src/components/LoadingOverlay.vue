@@ -16,7 +16,7 @@ export default Vue.extend({
   data() {
     return {
       isLoading: true,
-      text: "Loading ...",
+      text: "加载中 ...",
     };
   },
 });
