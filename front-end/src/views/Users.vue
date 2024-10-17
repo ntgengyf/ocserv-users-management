@@ -10,7 +10,7 @@
           <v-card-subtitle
             class="text-h5 grey darken-1 mb-8 white--text text-start"
           >
-            Ocserv Users
+            VPN用户
           </v-card-subtitle>
 
           <v-card-text>
@@ -19,7 +19,7 @@
                 <v-text-field
                   v-model="search"
                   append-icon="mdi-magnify"
-                  label="Search Ocserv User"
+                  label="搜索用户"
                   single-line
                   hide-details
                   @keyup="searchInit"
@@ -28,7 +28,7 @@
                 />
               </v-col>
               <v-col md="3" align-self="start">
-                <v-checkbox v-model="ascending" label="Ascending Sort" />
+                <v-checkbox v-model="ascending" label="升序排序" />
               </v-col>
               <v-spacer />
 
@@ -39,19 +39,19 @@
                   @click="(initInput = null), (userFormDialog = true)"
                 >
                   <v-icon left>mdi-account-plus-outline</v-icon>
-                  Create New User
+                  新建用户
                 </v-btn>
               </v-col>
               <v-col md="auto">
                 <v-btn @click="init" outlined>
                   <v-icon left>mdi-refresh</v-icon>
-                  refresh
+                  刷新
                 </v-btn>
               </v-col>
               <v-col md="auto">
                 <v-btn color="warning" outlined @click="syncOcpasswd">
                   <v-icon left>mdi-account-sync-outline</v-icon>
-                  Sync Ocpasswd
+                  同步到 Ocpasswd
                 </v-btn>
               </v-col>
             </v-row>
@@ -61,7 +61,7 @@
               :items="users"
               :items-per-page="100"
               :hide-default-footer="true"
-              no-data-text="No users"
+              no-data-text="没有VPN用户"
               disable-pagination
             >
               <template v-slot:[`item.status`]="{ item }">
@@ -111,7 +111,7 @@
                   </template>
                   <span v-html="item.desc" />
                 </v-tooltip>
-                <span v-else> No description </span>
+                <span v-else> 没有描述 </span>
               </template>
 
               <template v-slot:[`item.group`]="{ item }">
@@ -119,36 +119,36 @@
               </template>
 
               <template v-slot:[`item.avrages`]="{ item }">
-                <span class="primary--text">RX:</span>
+                <span class="primary--text">收:</span>
                 {{ item.rx }}
                 <br />
-                <span class="primary--text">TX:</span>
+                <span class="primary--text">发:</span>
                 {{ item.tx }}
                 <br />
               </template>
 
               <template v-slot:[`item.default_traffic`]="{ item }">
-                <span class="primary--text">Default Traffic:</span>
+                <span class="primary--text">默认流量:</span>
                 {{ item.default_traffic }}
                 <br />
-                <span class="primary--text">Traffic Type:</span>
+                <span class="primary--text">流量类型:</span>
                 {{ traffics[item.traffic] }}
                 <br />
               </template>
 
               <template v-slot:[`item.expire_date`]="{ item }">
-                <span class="primary--text">Create Date: </span>
+                <span class="primary--text">创建日期: </span>
                 {{ item.create }}
                 <br />
-                <span class="primary--text">Expire Date: </span>
+                <span class="primary--text">到期时间: </span>
                 {{ item.expire_date || "- - - - - - - - - -" }}
                 <br />
               </template>
 
               <template v-slot:[`item.username`]="{ item }">
-                <span class="primary--text">Username:</span> {{ item.username }}
+                <span class="primary--text">用户名:</span> {{ item.username }}
                 <br />
-                <span class="primary--text">Password:</span> {{ item.password }}
+                <span class="primary--text">密码:</span> {{ item.password }}
                 <br />
               </template>
 
@@ -309,60 +309,60 @@ export default Vue.extend({
       users: [],
       headers: [
         {
-          text: "User",
+          text: "用户",
           align: "start",
           filterable: true,
           value: "username",
         },
         {
-          text: "Group",
+          text: "群组",
           align: "start",
           filterable: true,
           value: "group",
         },
         {
-          text: "Active",
+          text: "激活",
           align: "start",
           filterable: true,
           value: "active",
         },
         {
-          text: "Dates",
+          text: "日期",
           align: "start",
           filterable: true,
           value: "expire_date",
           sortable: false,
         },
         {
-          text: "Traffic Details",
+          text: "流量详情",
           align: "start",
           filterable: true,
           value: "default_traffic",
           sortable: false,
         },
         {
-          text: "Avrages",
+          text: "平均值",
           align: "start",
           filterable: false,
           value: "avrages",
           sortable: false,
         },
         {
-          text: "Description",
+          text: "描述",
           align: "center",
           filterable: false,
           value: "desc",
           sortable: false,
         },
         {
-          text: "Status",
+          text: "状态",
           align: "center",
           filterable: false,
           value: "status",
           sortable: false,
         },
         {
-          text: "Edit",
+          text: "编辑",
           align: "center",
           filterable: false,
           value: "edit",
