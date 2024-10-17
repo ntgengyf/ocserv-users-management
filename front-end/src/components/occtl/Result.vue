@@ -6,7 +6,7 @@
           <v-col md="5">
             <v-divider style="border-top: 2px solid #1976d2" />
           </v-col>
-          <v-col md="1"> Command Result</v-col>
+          <v-col md="1"> 命令结果</v-col>
           <v-col md="5">
             <v-divider style="border-top: 2px solid #1976d2" />
           </v-col>
