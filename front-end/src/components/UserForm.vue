@@ -20,7 +20,7 @@
               :items="groups"
               item-text="name"
               item-value="id"
-              label="Group"
+              label="群组"
               :rules="[rules.required]"
               dense
               prepend-inner-icon="mdi-home-group"
@@ -29,7 +29,7 @@
           <v-col md="4">
             <v-text-field
               v-model="userInput.username"
-              label="Username"
+              label="用户名"
               :rules="[rules.required]"
               dense
               prepend-inner-icon="mdi-account-outline"
@@ -38,7 +38,7 @@
           <v-col md="4">
             <v-text-field
               v-model="userInput.password"
-              label="Password"
+              label="密码"
               :rules="[rules.required]"
               dense
               autocomplete="new-password"
@@ -56,7 +56,7 @@
               <template v-slot:activator="{ on, attrs }">
                 <v-text-field
                   v-model="userInput.expire_date"
-                  label="Expire Date"
+                  label="到期时间"
                   prepend-inner-icon="mdi-calendar"
                   readonly
                   v-bind="attrs"
@@ -85,7 +85,7 @@
               :items="trafficTypes"
               item-text="name"
               item-value="id"
-              label="Traffic Type"
+              label="流量类型"
               :rules="[rules.required]"
               dense
               prepend-inner-icon="mdi-traffic-light-outline"
@@ -96,7 +96,7 @@
               v-model="userInput.default_traffic"
               :rules="userInput.traffic == 1 ? [] : [rules.required]"
               dense
-              label="Default Traffic"
+              label="默认流量"
               :disabled="userInput.traffic == 1"
               prepend-inner-icon="mdi-numeric"
             />
@@ -104,14 +104,14 @@
           <v-col md="auto">
             <v-checkbox
               v-model="userInput.active"
-              label="Active"
+              label="激活"
               :disabled="activeDisabled"
             />
           </v-col>
           <v-col md="12">
             <v-textarea
               v-model="userInput.desc"
-              label="Description"
+              label="描述"
               dense
               outlined
               rows="4"
