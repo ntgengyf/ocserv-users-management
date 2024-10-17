@@ -1,7 +1,7 @@
 <template>
   <v-card :width="width" height="460">
     <v-card-title class="grey darken-1 mb-5 white--text text-start">
-      {{ editMode ? "Update Ocserv User" : "Create Ocserv User" }}
+      {{ editMode ? "更新用户" : "创建用户" }}
       <v-spacer v-if="dialog" />
       <v-btn
         icon
