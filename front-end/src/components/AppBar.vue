@@ -8,7 +8,7 @@
     absolute
   >
     <v-img :src="logo" max-width="120" />
-    <span>Ocserv Panel</span>
+    <span>VPN管理面板</span>
 
     <v-tabs v-model="tab" centered v-if="$store.state.isLogin">
       <v-tab v-for="(tab, index) in menuTabs" :key="index" :to="tab.to">
@@ -78,7 +78,7 @@
     >
       <v-card>
         <v-card-title class="grey darken-1 mb-5 white--text text-start">
-          Change Password
+          修改密码
           <v-spacer />
           <v-btn
             icon
@@ -92,7 +92,7 @@
           <v-form v-model="validForm" ref="validForm">
             <v-text-field
               v-model="changePasswordModel.oldPassword"
-              label="Current Password"
+              label="当前密码"
               :rules="[rules.required]"
               :type="changePasswordModel.oldPasswordshow ? 'text' : 'password'"
               :append-icon="
@@ -108,7 +108,7 @@
             />
             <v-text-field
               v-model="changePasswordModel.password"
-              label="New Password"
+              label="新密码"
               :rules="[rules.required]"
               :type="changePasswordModel.passwordShow ? 'text' : 'password'"
               :append-icon="
@@ -150,7 +150,7 @@
     >
       <v-card>
         <v-card-title class="grey darken-1 mb-5 white--text text-start">
-          Staff Users
+          管理员
           <v-spacer />
           <v-btn
             icon
@@ -195,7 +195,7 @@
     >
       <v-card>
         <v-card-title class="grey darken-1 mb-5 white--text text-start">
-          Create Staff User
+          创建管理员
           <v-spacer />
           <v-btn
             icon
@@ -209,12 +209,12 @@
           <v-form v-model="validForm" ref="validForm">
             <v-text-field
               v-model="staff.user.username"
-              label="Username"
+              label="用户名"
               :rules="[rules.required]"
             />
             <v-text-field
               v-model="staff.user.password"
-              label="Password"
+              label="密码"
               :rules="[rules.required]"
               :type="staff.createPasswordShow ? 'text' : 'password'"
               :append-icon="
@@ -240,7 +240,7 @@
             @click="createStaff"
             :loading="staff.createLoading"
           >
-            Create Staff
+            创建管理员
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -316,19 +316,19 @@ export default Vue.extend({
             value: "id",
           },
           {
-            text: "Username",
+            text: "用户名",
             align: "start",
             filterable: true,
             value: "username",
           },
           {
-            text: "Role",
+            text: "角色",
             align: "center",
             filterable: true,
             value: "is_admin",
           },
           {
-            text: "action",
+            text: "执行",
             align: "center",
             filterable: false,
             value: "action",
