@@ -7,7 +7,6 @@ fi
 OS_VERSION=$(grep '^VERSION' /etc/os-release | grep "Focal Fossa" | wc -l)
 if [ "${OS_VERSION}" -eq "0" ]; then
     echo "This script is only stable with Ubuntu 20.04(Focal Fossa)"
-    exit 1
 fi
 if [ -z "$PORT" ]; then
     PORT=20443
