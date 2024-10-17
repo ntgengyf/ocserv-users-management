@@ -6,7 +6,7 @@
           <v-text-field
             v-model="search"
             append-icon="mdi-magnify"
-            label="Search Iroutes"
+            label="搜索路由"
             single-line
             hide-details
           />
@@ -42,7 +42,7 @@ export default Vue.extend({
           value: "ID",
         },
         {
-          text: "Username",
+          text: "用户名",
           align: "start",
           filterable: true,
           value: "Username",
@@ -54,7 +54,7 @@ export default Vue.extend({
           value: "vhost",
         },
         {
-          text: "Device",
+          text: "设备",
           align: "start",
           filterable: false,
           value: "Device",
@@ -66,7 +66,7 @@ export default Vue.extend({
           value: "IP",
         },
         {
-          text: "iRoutes",
+          text: "路由",
           align: "start",
           filterable: false,
           value: "iRoutes",
