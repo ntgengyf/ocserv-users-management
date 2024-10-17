@@ -11,7 +11,7 @@
           <v-card-text>
             <v-card elevation="3" outlined rounded>
               <v-card-subtitle class="text-h5 grey darken-1 mb-8 white--text">
-                Login
+                登录面板
               </v-card-subtitle>
 
               <v-card-text>
@@ -20,7 +20,7 @@
                     <v-col md="12" cols="12" class="px-5">
                       <v-text-field
                         v-model="input.username"
-                        label="Username"
+                        label="用户名"
                         outlined
                         :rules="[rules.required]"
                         dense
@@ -31,7 +31,7 @@
                         v-model="input.password"
                         :type="passwordShow ? 'text' : 'password'"
                         :rules="[rules.required]"
-                        label="Password"
+                        label="密码"
                         outlined
                         dense
                         :append-icon="
@@ -74,7 +74,7 @@
                   :disabled="validateFormComput"
                   :loading="loading"
                 >
-                  Apply
+                  登录
                 </v-btn>
               </v-card-actions>
             </v-card>
