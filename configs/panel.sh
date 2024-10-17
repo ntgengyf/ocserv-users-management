@@ -67,6 +67,8 @@ echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.co
 sudo apt-get update
 sudo apt-get install nodejs -y
 cd ${CURRENT_DIR}/front-end/
+# switch npm_taobao_source
+npm config set registry https://registry.npmmirror.com
 npm install
 NODE_ENV=production npm run build
 mkdir -p ${SITE_DIR}/front-end
