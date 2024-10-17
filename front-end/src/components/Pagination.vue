@@ -2,7 +2,7 @@
   <v-row align="center" justify="start" class="my-1 mx-1 pa-0">
     <v-col class="ma-0 pa-0" cols="auto">
       <span class="font-weight-medium me-2 text-subtitle-2 text--secondary">
-        Item per page
+        每页显示数
       </span>
     </v-col>
     <v-col class="ma-0 pa-0" cols="1">
