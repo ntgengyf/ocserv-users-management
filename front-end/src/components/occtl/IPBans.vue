@@ -6,7 +6,7 @@
           <v-text-field
             v-model="search"
             append-icon="mdi-magnify"
-            label="Search IP bans"
+            label="搜索禁用IP"
             single-line
             hide-details
           />
