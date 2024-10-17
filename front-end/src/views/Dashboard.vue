@@ -73,9 +73,9 @@ export default Vue.extend({
         show_status: "",
       },
       tabs: [
-        { id: 1, name: "Show Status", key: "show_status" },
-        { id: 2, name: "Online Users", key: "online_users" },
-        { id: 3, name: "Show Iroutes", key: "show_iroutes" },
+        { id: 1, name: "显示状态", key: "show_status" },
+        { id: 2, name: "在线用户", key: "online_users" },
+        { id: 3, name: "显示路由", key: "show_iroutes" },
       ],
       StringToJson: StringToJson,
     };
