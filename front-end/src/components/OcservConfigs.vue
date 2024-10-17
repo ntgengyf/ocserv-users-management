@@ -50,7 +50,7 @@
       <v-col md="6" class="my-0 py-0">
         <v-text-field
           v-model="noRoute"
-          label="无路由"
+          label="排除路由"
           :outlined="outlined"
           dense
           clearable
