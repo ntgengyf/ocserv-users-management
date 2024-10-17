@@ -10,7 +10,7 @@
           <v-card-subtitle
             class="text-h5 grey darken-1 mb-8 white--text text-start"
           >
-            Ocserv Groups
+            群组
           </v-card-subtitle>
           <v-card-text>
             <v-row align="center" justify="start" class="my-3 ms-2">
@@ -18,7 +18,7 @@
                 <v-text-field
                   v-model="search"
                   append-icon="mdi-magnify"
-                  label="Search Ocserv Group"
+                  label="搜索群组"
                   single-line
                   hide-details
                   @keyup="searchInit"
@@ -28,20 +28,20 @@
               </v-col>
 
               <v-col md="3" align-self="start">
-                <v-checkbox v-model="ascending" label="Ascending Sort" />
+                <v-checkbox v-model="ascending" label="升序排序" />
               </v-col>
 
               <v-spacer />
               <v-col md="auto">
                 <v-btn color="primary" outlined @click="groupFormDialog = true">
                   <v-icon left>mdi-home-group-plus</v-icon>
-                  Create New Group
+                  新建群组
                 </v-btn>
               </v-col>
               <v-col md="auto" class="me-5">
                 <v-btn @click="init" outlined>
                   <v-icon left>mdi-refresh</v-icon>
-                  refresh
+                  刷新
                 </v-btn>
               </v-col>
             </v-row>
@@ -185,26 +185,26 @@ export default Vue.extend({
       groups: [],
       headers: [
         {
-          text: "Name",
+          text: "名称",
           align: "start",
           filterable: true,
           value: "name",
         },
 
         {
-          text: "Configs",
+          text: "配置",
           align: "start",
           filterable: true,
           value: "configs",
         },
         {
-          text: "Description",
+          text: "描述",
           align: "center",
           filterable: true,
           value: "desc",
         },
         {
-          text: "Edit",
+          text: "编辑",
           align: "center",
           filterable: false,
           value: "edit",
@@ -217,9 +217,9 @@ export default Vue.extend({
       total_count: 0,
       search: "",
       traffics: {
-        1: "Free",
-        2: "Monthly",
-        3: "Totally",
+        1: "自由的",
+        2: "每月的",
+        3: "总的",
       },
       groupFormDialog: false,
       initInput: null,
