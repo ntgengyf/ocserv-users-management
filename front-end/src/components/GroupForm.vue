@@ -1,7 +1,7 @@
 <template>
   <v-card :width="width" min-height="500">
     <v-card-title class="grey darken-1 mb-5 white--text text-start">
-      {{ editMode ? "Update Ocserv Group" : "Create Ocserv Group" }}
+      {{ editMode ? "更新群组" : "创建群组" }}
       <v-spacer v-if="dialog" />
       <v-btn
         icon
@@ -60,7 +60,7 @@
             :disabled="!groupFormValid"
             @click="save"
           >
-            {{ editMode ? "Update" : "Create" }}
+            {{ editMode ? "更新" : "创建" }}
           </v-btn>
         </v-col>
       </v-row>
