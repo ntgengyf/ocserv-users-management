@@ -8,7 +8,7 @@
           width="850"
         >
           <v-card-subtitle class="text-h5 grey darken-1 mb-8 white--text">
-            Configuration
+            配置
           </v-card-subtitle>
 
           <v-card-text>
@@ -17,7 +17,7 @@
                 <v-col md="4" cols="12" class="ma-0 pa-1" v-if="!editMode">
                   <v-text-field
                     v-model="input.username"
-                    label="Admin Username"
+                    label="管理员用户名"
                     outlined
                     :rules="[rules.required]"
                     dense
@@ -28,7 +28,7 @@
                     v-model="input.password"
                     :type="passwordShow ? 'text' : 'password'"
                     :rules="[rules.required]"
-                    label="Admin Password"
+                    label="管理员密码"
                     outlined
                     dense
                     :append-icon="
@@ -41,7 +41,7 @@
                 <v-col :md="!editMode ? 3 : 12" cols="12" class="ma-0 pa-1">
                   <v-text-field
                     v-model="input.default_traffic"
-                    label="Default Traffic(GB)"
+                    label="默认流量(GB)"
                     outlined
                     :rules="[rules.required]"
                     dense
@@ -71,14 +71,14 @@
                   cols="12"
                   class="text-start ma-0 pa-1 primary--text text-h5"
                 >
-                  Default Group configs
+                  默认群组配置
                   <v-divider class="mb-5 mt-1" />
                 </v-col>
 
                 <v-col md="12" cols="12" class="ma-0 pa-1">
                   <OcservConfigs
                     v-model="input.default_configs"
-                    label="Default Config keys"
+                    label="默认配置值"
                     valueLabel="Default Config Value"
                     :initInput="input.default_configs"
                     vmodelEmit
@@ -92,7 +92,7 @@
                   <v-checkbox
                     class="ma-0 mt-1"
                     v-model="changePassword"
-                    label="Change Password"
+                    label="修改密码"
                   />
                 </v-col>
                 <v-col md="9" cols="12" class="ma-0 pa-1">
@@ -102,7 +102,7 @@
                 <v-col md="6" cols="12" class="ma-0 pa-1" v-if="changePassword">
                   <v-text-field
                     v-model="input.password"
-                    label="Old Password"
+                    label="旧密码"
                     :append-icon="
                       passwordShow ? 'mdi-eye-off-outline' : 'mdi-eye-outline'
                     "
@@ -118,7 +118,7 @@
                 <v-col md="6" cols="12" class="ma-0 pa-1" v-if="changePassword">
                   <v-text-field
                     v-model="input.new_password"
-                    label="New Password"
+                    label="新密码"
                     :append-icon="
                       newPasswordShow
                         ? 'mdi-eye-off-outline'
@@ -225,7 +225,7 @@ export default Vue.extend({
       }
       if (status == 202) {
         this.$store.commit("setSnackBar", {
-          text: "Update successfully",
+          text: "更新成功",
           color: "Success",
         });
       }
