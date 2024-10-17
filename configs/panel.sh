@@ -31,9 +31,9 @@ cp ./configs/user_stats.service /lib/systemd/system
 cp ./configs/uwsgi.ini ${SITE_DIR}/back-end
 python3 -m venv ${SITE_DIR}/back-end/venv
 source ${SITE_DIR}/back-end/venv/bin/activate
-pip install -U wheel setuptools
-pip install -r ${SITE_DIR}/back-end/requirements.txt
-pip install uwsgi==2.0.24
+pip install -U wheel setuptools -i https://mirrors.aliyun.com/pypi/simple
+pip install -r ${SITE_DIR}/back-end/requirements.txt -i https://mirrors.aliyun.com/pypi/simple
+pip install uwsgi==2.0.24 -i https://mirrors.aliyun.com/pypi/simple
 SECRET_KEY=$(openssl rand -base64 '64')
 echo "DEBUG=False" >${SITE_DIR}/back-end/.env
 echo "SECRET_KEY=${SECRET_KEY}" >>${SITE_DIR}/back-end/.env
