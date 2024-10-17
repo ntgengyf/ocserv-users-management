@@ -11,7 +11,7 @@
           <v-card-subtitle
             class="text-h5 grey darken-1 mb-8 white--text text-start"
           >
-            Dashboard
+            仪表板
           </v-card-subtitle>
           <v-card-text class="text-start">
             <v-tabs vertical>
