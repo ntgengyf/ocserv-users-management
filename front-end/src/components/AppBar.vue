@@ -26,7 +26,7 @@
       >
         <template v-slot:activator="{ on, attrs }">
           <v-btn color="white" dark v-bind="attrs" v-on="on" small outlined>
-            Profile
+            Admin
           </v-btn>
         </template>
 
@@ -354,17 +354,17 @@ export default Vue.extend({
       logo: require("@/assets/oc_logo.png"),
       menuTabs: [
         {
-          title: "Dashboard",
+          title: "仪表板",
           icon: "mdi-monitor-dashboard",
           to: "/",
         },
         {
-          title: "Groups",
+          title: "群组",
           icon: "mdi-home-group",
           to: "/groups",
         },
         {
-          title: "Users",
+          title: "用户",
           icon: "mdi-account-group-outline",
           to: "/users",
         },
@@ -374,17 +374,17 @@ export default Vue.extend({
           to: "/occtl",
         },
         {
-          title: "User Statistics",
+          title: "用户统计",
           icon: "mdi-chart-bar",
           to: "/stats",
         },
         {
-          title: "System",
+          title: "系统",
           icon: "mdi-linux",
           to: "/system",
         },
         {
-          title: "Configuration",
+          title: "配置",
           icon: "mdi-cog-outline",
           to: "/configuration",
         },
