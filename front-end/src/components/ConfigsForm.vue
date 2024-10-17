@@ -145,7 +145,7 @@
               :disabled="!formValid"
               :loading="loading"
             >
-              Apply
+              应用
             </v-btn>
           </v-card-actions>
         </v-card>
