@@ -33,7 +33,7 @@ GetModes() {
 
     if [ "$(echo "2 3" | grep -w $mode)" ] && [ "$(grep '^VERSION' /etc/os-release | grep "Focal Fossa" | wc -l)" -eq "0" ]; then
         color_echo "31;1" "This script is only stable with Ubuntu 20.04(Focal Fossa)"
-        GetModes
+        ./configs/panel.sh
     fi
 
     if [ "$(echo "1" | grep -w $mode)" ] && [ ! -x "$(command -v docker)" ]; then
