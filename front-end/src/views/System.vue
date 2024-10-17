@@ -9,7 +9,7 @@
           min-height="880"
         >
           <v-card-subtitle class="text-h5 grey darken-1 mb-8 white--text">
-            <span class="mb-10">System Logs & Services</span>
+            <span class="mb-10">系统日志和服务</span>
             <div>
               <v-tabs
                 v-model="subTabs"
@@ -90,7 +90,7 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  name: "System",
+  name: "系统",
   data() {
     return {
       sentences: [] as string[],
@@ -99,24 +99,24 @@ export default Vue.extend({
       subMenuTabs: [
         {
           id: 1,
-          title: "Action Logs",
+          title: "操作日志",
           component: () => import("@/components/system/Action.vue"),
         },
         {
           id: 2,
-          title: "Ocserv Systemd",
+          title: "Systemd日志",
           component: () => import("@/components/system/OcservSyatemd.vue"),
         },
         {
           id: 3,
-          title: "Ocserv Journal",
+          title: "Journal日志",
           component: () => import("@/components/system/Journal.vue"),
         },
       ],
       subMenuTabsDocker: [
         {
           id: 1,
-          title: "Action Logs",
+          title: "操作日志",
           component: () => import("@/components/system/Action.vue"),
         },
       ],
