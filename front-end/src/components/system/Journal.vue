@@ -14,7 +14,7 @@
       <v-col md="1" align-self="start" class="ma-0 pa-0">
         <v-text-field
           v-model.number="intervalTimeClone"
-          label="Refresh Time"
+          label="刷新时间"
           hint="Refresh Time"
           persistent-hint
           single-line
