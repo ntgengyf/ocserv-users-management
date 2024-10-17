@@ -36,7 +36,7 @@
       <v-col md="6" class="my-0 py-0">
         <v-text-field
           v-model="route"
-          label="routes"
+          label="路由"
           :outlined="outlined"
           dense
           clearable
@@ -50,7 +50,7 @@
       <v-col md="6" class="my-0 py-0">
         <v-text-field
           v-model="noRoute"
-          label="no routes"
+          label="无路由"
           :outlined="outlined"
           dense
           clearable
@@ -148,19 +148,19 @@ export default Vue.extend({
       noRoute: null,
       OcservconfigItems: [
         {
-          label: "RX Data(bytes/sec)",
+          label: "接收数据(bytes/sec)",
           model: "rx-data-per-sec",
           type: "text",
           rules: [number],
         },
         {
-          label: "TX Data(bytes/sec)",
+          label: "发送数据(bytes/sec)",
           model: "tx-data-per-sec",
           type: "text",
           rules: [number],
         },
         {
-          label: "Max Session Per Client",
+          label: "客户端最大会话数",
           model: "max-same-clients",
           type: "text",
           rules: [number],
@@ -200,7 +200,7 @@ export default Vue.extend({
           rules: [number],
         },
         {
-          label: "Tunnel All DNS",
+          label: "通过隧道发送所有DNS",
           model: "tunnel-all-dns",
           type: "select",
           items: [
@@ -209,7 +209,7 @@ export default Vue.extend({
           ],
         },
         {
-          label: "Restrict User To Routes",
+          label: "限制用户路由",
           model: "restrict-user-to-routes",
           type: "select",
           items: [
@@ -218,26 +218,26 @@ export default Vue.extend({
           ],
         },
         {
-          label: "Stats Report Time(Seconds)",
+          label: "统计报告时间(秒)",
           model: "stats-report-time",
           type: "text",
           rules: [number],
         },
         { label: "MTU", model: "mtu", type: "text", rules: [number] },
         {
-          label: "IDLE Timeout(Seconds)",
+          label: "闲置超时(秒)",
           model: "idle-timeout",
           type: "text",
           rules: [number],
         },
         {
-          label: "Mobile IDLE Timeout(Seconds)",
+          label: "移动设备闲置超时(秒)",
           model: "mobile-idle-timeout",
           type: "text",
           rules: [number],
         },
         {
-          label: "Session Timeout(Seconds)",
+          label: "会话超时(秒)",
           model: "session-timeout",
           type: "text",
           rules: [number],
