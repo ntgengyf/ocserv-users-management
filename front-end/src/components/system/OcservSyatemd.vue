@@ -17,11 +17,11 @@
         <v-row align="center" justify="start" class="mt-10">
           <v-col md="12" class="info--text py-0 my-1">
             <v-icon color="info">mdi-lightbulb-on-outline</v-icon>
-            (Systemd mode) Restarting the ocserv service is allowed only 1 time per minute.
+            (Systemd mode) 每分钟只允许重启 VPN 服务1次.
           </v-col>
           <v-col md="12" class="info--text py-0 my-1" v-if="dockerized">
             <v-icon color="info">mdi-lightbulb-on-outline</v-icon>
-            (Dockerize mode) The restart operation only shows system log results.
+            (Dockerize mode) 重启操作仅显示系统日志结果.
           </v-col>
         </v-row>
       </v-card-subtitle>
@@ -29,7 +29,7 @@
       <v-card-text>
         <div v-if="status.length">
           <div v-if="dockerized" class="info--text text-h6 mb-2">
-            Note: Result is From Docker service Container
+            注意: 结果来自Docker服务容器
           </div>
           <div v-else class="info--text text-h6 mb-2">Result:</div>
           <div v-for="(line, index) in status" :key="index">
