@@ -2,7 +2,7 @@
 
 ### Web panel to manage ocserv and openconnect users
 
-#### Requirements(Ubuntu 20.04 or Docker host)
+#### Requirements(Ubuntu or Docker host)
 
 ## Features:
 
