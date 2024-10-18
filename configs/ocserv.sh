@@ -4,9 +4,10 @@ if [[ $(id -u) != "0" ]]; then
     echo -e "\e[0;31m"Error: You must be root to run this install script."\e[0m"
     exit 1
 fi
-OS_VERSION=$(grep '^VERSION' /etc/os-release | grep "Focal Fossa" | wc -l)
+OS_VERSION=$(cat /etc/issue | grep -i ubuntu| wc -l)
 if [ "${OS_VERSION}" -eq "0" ]; then
-    echo "This script is only stable with Ubuntu 20.04(Focal Fossa)"
+    echo "This script is only stable with Ubuntu"
+    exit 1
 fi
 if [ -z "$PORT" ]; then
     PORT=20443
