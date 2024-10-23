@@ -14,7 +14,7 @@ if [ -z "$PORT" ]; then
 fi
 echo -e "\e[0;36m"Installing Ocserv..."\e[0m"
 apt-get update
-apt-get install -y ocserv gnutls-bin
+apt-get install -y ocserv gnutls-bin iptables
 if [ "$?" = "0" ]; then
     echo -e "\e[0;32m"Ocserv Installation Was Successful."\e[0m"
 else
@@ -69,45 +69,45 @@ fi
 if [ ! -f '/etc/ocserv/ocserv.conf' ] || [ $(grep -r "custom config" /etc/ocserv/ocserv.conf | wc -l) == "0" ]; then
     cat <<EOT >/etc/ocserv/ocserv.conf
 # custom config
-auth="plain[passwd=/etc/ocserv/ocpasswd]"
-run-as-user=root
-run-as-group=root
-socket-file=ocserv.sock
-chroot-dir=/run
-isolate-workers=true
-max-clients=1024
-keepalive=32400
-dpd=90
-mobile-dpd=1800
-switch-to-tcp-timeout=5
-try-mtu-discovery=true
-server-cert=/etc/ocserv/certs/cert.pem
-server-key=/etc/ocserv/certs/cert.key
+auth = "plain[passwd=/etc/ocserv/ocpasswd]"
+run-as-user = root
+run-as-group = root
+socket-file = ocserv.sock
+chroot-dir = /run
+isolate-workers = true
+max-clients = 1024
+keepalive = 32400
+dpd = 90
+mobile-dpd = 1800
+switch-to-tcp-timeout = 25
+try-mtu-discovery = true
+server-cert = /etc/ocserv/certs/cert.pem
+server-key = /etc/ocserv/certs/cert.key
 #tls-priorities="NORMAL:%SERVER_PRECEDENCE:%COMPAT:-VERS-SSL3.0"
-tls-priorities="NORMAL:%SERVER_PRECEDENCE:%COMPAT:-VERS-SSL3.0:-VERS-TLS1.0:-VERS-TLS1.1"
-auth-timeout=240
-min-reauth-time=300
-max-ban-score=50
-ban-reset-time=300
-cookie-timeout=86400
-deny-roaming=false
-rekey-time=172800
-rekey-method=ssl
-use-occtl=true
-pid-file=/var/run/ocserv.pid
-device=vpns
-predictable-ips=true
-tunnel-all-dns=true
-dns=${DNS}
-ping-leases=false
-mtu=1420
-cisco-client-compat=true
-dtls-legacy=true
-tcp-port=${PORT}
-udp-port=${PORT}
-max-same-clients=2
-ipv4-network=${OC_NET}
-config-per-group=/etc/ocserv/groups/
+tls-priorities = "NORMAL:%SERVER_PRECEDENCE:%COMPAT:-RSA:-VERS-SSL3.0:-ARCFOUR-128"
+auth-timeout = 240
+min-reauth-time = 300
+max-ban-score = 50
+ban-reset-time = 300
+cookie-timeout = 86400
+deny-roaming = false
+rekey-time = 172800
+rekey-method = ssl
+use-occtl = true
+pid-file = /var/run/ocserv.pid
+device = vpns
+predictable-ips = true
+tunnel-all-dns = true
+dns = ${DNS}
+ping-leases = false
+mtu = 1500
+cisco-client-compat = true
+dtls-legacy = true
+tcp-port = ${PORT}
+udp-port = ${PORT}
+max-same-clients = 5
+ipv4-network = ${OC_NET}
+config-per-group = /etc/ocserv/groups/
 EOT
     mkdir /etc/ocserv/defaults
     >/etc/ocserv/defaults/group.conf
